@@ -1,6 +1,8 @@
-let fahrenheit = 75,
-  celsius = ((fahrenheit - 32) * 5) / 9,
-  kelvin = (fahrenheit - 32) * (5 / 9) + 273.15;
+let fahrenheit = 50 // 0c - 273.15k
+let celsius = (fahrenheit - 32) * 5 / 9
+let kelvin = (fahrenheit + 459.67) * 5 / 9
 
-console.log(kelvin);
-console.log(celsius);
+console.log(celsius)
+console.log(kelvin)
+
+let tipPercent2 = total + total * tipPercent;
