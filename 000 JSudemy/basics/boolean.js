@@ -1,7 +1,8 @@
-let age = 65;
-isChild = age <= 7;
-isSenior = age >= 65;
+let age = 7;
 
-console.log(isChild);
-console.log(isSenior);
-
+if (age <= 7) {
+  console.log("kom eens hier meisje");
+}
+if (age >= 7) {
+  console.log("you old fart");
+} 
