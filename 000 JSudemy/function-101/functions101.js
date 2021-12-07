@@ -1,7 +1,7 @@
-let convertFahrenheitToCelsius = function (num) {
-  let result = ((num - 32) * 5) / 9;
+let convertFahrenheitToCelsius = function (fahrenheit) {
+  let result = ((fahrenheit - 32) * 5) / 9;
   return result;
 };
-let celsius = convertFahrenheitToCelsius(32);
+let celsius = convertFahrenheitToCelsius(150);
 
 console.log(celsius);
