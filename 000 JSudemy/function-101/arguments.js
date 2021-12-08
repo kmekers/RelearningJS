@@ -14,15 +14,12 @@ console.log(scoreText);
 // challenge area
 
 let getTip = function (total, tipPercent) {
-  let tipPercent2 = total * tipPercent + total;
-  return (
-    "Total = " +
-    total +
-    " tip = " +
-    total * tipPercent +
-    " tip + totaal=   " +
-    tipPercent2
-  );
+  let tip = total * tipPercent;
+  let tipPercent2 = tip + total;
+  return `Total = ${total} tip = ${tip} Total+ tip= ${tipPercent2}
+  Het aantal percent tip u koos is ${
+    tipPercent * 100
+  } dit komt neer op ${tip} Euro`;
 };
-let test = getTip(500, 0.2);
+let test = getTip(60, 0.2);
 console.log(test);
