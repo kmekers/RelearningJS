@@ -29,7 +29,7 @@ let accountSummary = function (account) {
 
 /* console.log(myAccount); */
 accountSummary(myAccount);
-console.log(myAccount.summary);
+
 console.log(accountSummary(myAccount));
 /* resetAccount(myAccount);
  */
