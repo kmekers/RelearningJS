@@ -24,7 +24,7 @@ console.log(firstbook.pageCountSummary);
 let getFar = function (temp) {
   return {
     fahrenheit: temp,
-    celsius:   (temp -32 )* 5 / 9,
+    celsius:  - (temp32 )* 5 / 9,
     kelvin: ((temp - 32) * 5) / 9 + 273.15,
   };
 };
