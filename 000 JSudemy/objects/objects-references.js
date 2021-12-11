@@ -1,35 +1,30 @@
 let myAccount = {
-  name: "Koen Mekers",
-  expences: 0,
-  income: 0,
-};
+    name: 'Andrew Mead',
+    expenses: 0,
+    income: 0
+}
 
-let addExpence = function (account, amount) {
-  account.expences = account.expences + amount;
-  console.log(account);
-};
-addExpence(myAccount, 2.5);
+let addExpense = function (account, amount) {
+    account.expenses = account.expenses + amount
+}
 
 let addIncome = function (account, income) {
-  account.income = account.income + income;
-};
-
-addIncome(myAccount, 300);
+    account.income = account.income + income
+}
 
 let resetAccount = function (account) {
-  account.expences = 0;
-  account.income = 0;
-};
+    account.expenses = 0
+    account.income = 0
+}
 
-let accountSummary = function (account) {
-  let balance = account.income - account.expences;
-  return `Account for ${account.name} has ${balance}
-       ${account.income} in income and ${account.expences} in expences `;
-};
+let getAccountSummary = function (account) {
+    let balance = account.income - account.expenses
+    return `Account for ${account.name} has $${balance}. $${account.income} in income. $${account.expenses} in expenses.`
+}
 
-/* console.log(myAccount); */
-accountSummary(myAccount);
-
-console.log(accountSummary(myAccount));
-/* resetAccount(myAccount);
- */
+addIncome(myAccount, 2000)
+addExpense(myAccount, 2.50)
+addExpense(myAccount, 160)
+console.log(getAccountSummary(myAccount))
+resetAccount(myAccount)
+console.log(getAccountSummary(myAccount))
