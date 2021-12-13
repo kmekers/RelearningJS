@@ -11,3 +11,20 @@ notes[2] = "this is now the new note 3";
 
 console.log(notes.length);
 console.log(notes);
+
+notes.forEach(function (note, index) {
+  console.log(index, note);
+});
+for (let i = 2; i >= 0; i--) {
+  console.log(i);
+}
+
+/* for (let i = 0; i < notes.length; i++) {
+  console.log(notes[i]);
+
+  // notes is array en I loopt die met de for function.
+} */
+/* for (let i = notes.length - 1; i >= 0; i--) {
+console.log(notes[i]);} */
+
+// notes is array en I loopt die met de for function.
