@@ -6,6 +6,10 @@ let toDo = [
   "wordpress cursus doen",
 ];
 console.log(`je hebt ${toDo.length} to do's`);
-console.log(
-  `De eerste todo is ${toDo[0]} de tweede is ${toDo[toDo.length - 2]} `
-);
+
+toDo.splice(2, 1);
+console.log(toDo);
+toDo.push("Iedere dag een beetje JS");
+console.log(toDo);
+toDo.shift();
+console.log(toDo);
