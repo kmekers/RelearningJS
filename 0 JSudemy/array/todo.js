@@ -1,26 +1,34 @@
-let toDo = [
-  "js leren",
-  "css-grid leren",
-  "positioning leren",
-  "vh etc leren",
-  "wordpress cursus doen",
+const todos = [
+  {
+    text: "Order cat food",
+    completed: true,
+  },
+  {
+    text: "Clean kitchen",
+    completed: false,
+  },
+  {
+    text: "Buy food",
+    completed: true,
+  },
+  {
+    text: "Do work",
+    completed: false,
+  },
+  {
+    text: "Exercise",
+    completed: true,
+  },
 ];
-console.log(`je hebt ${toDo.length} to do's`);
 
-/* toDo.forEach(function (toDo, index) {
-  index = index + 1;
-  console.log(index, toDo);
-});
- */
-for (let i = 0; i < toDo.length; i++) {
-  console.log(` ${i + 1} ${toDo[i]}`);
-}
+let deleteTodo = function (todos, todotext) {
+  let i = todos.findIndex(function (dontknowwhythisworks) {
+    return dontknowwhythisworks.text.toLowerCase() === todotext.toLowerCase();
+  });
+  if (i > -1) {
+    todos.splice(i, 1);
+  }
+};
 
-/* 
-toDo.splice(2, 1);
-console.log(toDo);
-toDo.push("Iedere dag een beetje JS");
-console.log(toDo);
-toDo.shift();
-console.log(toDo);
- */
+deleteTodo(todos, "buy food");
+console.log(todos);

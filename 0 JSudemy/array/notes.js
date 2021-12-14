@@ -1,30 +1,26 @@
-const notes = ["note 1", "note 2", "note 3"];
+const notes = [{
+    title: 'My next trip',
+    body: 'I would like to go to Spain'
+}, {
+    title: 'Habbits to work on',
+    body: 'Exercise. Eating a bit better.'
+}, {
+    title: 'Office modification',
+    body: 'Get a new seat'
+}]
 
-/* notes.pop();
-notes.push("My new note");
-console.log(notes.shift());
-notes.unshift("My first note"); */
-
-/* notes.splice(1, 1, "this is the new second item");*/
-
-notes[2] = "this is now the new note 3";
-
-console.log(notes.length);
-console.log(notes);
-
-notes.forEach(function (note, index) {
-  console.log(index, note);
-});
-for (let i = 2; i >= 0; i--) {
-  console.log(i);
+const findNote = function (notes, noteTitle) {
+    return notes.find(function (note, index) {
+        return note.title.toLowerCase() === noteTitle.toLowerCase()
+    })
 }
 
-/* for (let i = 0; i < notes.length; i++) {
-  console.log(notes[i]);
+// const findNote = function (notes, noteTitle) {
+//     const index = notes.findIndex(function (note, index) {
+//         return note.title.toLowerCase() === noteTitle.toLowerCase()
+//     })
+//     return notes[index]
+// }
 
-  // notes is array en I loopt die met de for function.
-} */
-/* for (let i = notes.length - 1; i >= 0; i--) {
-console.log(notes[i]);} */
-
-// notes is array en I loopt die met de for function.
+const note = findNote(notes, 'some other office modification')
+console.log(note)
