@@ -1,3 +1,4 @@
+let count = 0;
 const account = {
   name: "andrew mead",
   expenses: [],
@@ -5,12 +6,16 @@ const account = {
     this.expenses.push({ Expensetitle: Expensetitle, amount: amount });
   },
   getAccountSummary: function () {
-    account.expenses.forEach((amount) => {
-      console.log(`${amount + amount}. `);
+    totalExpense = 0;
+
+    this.expenses.forEach((expense) => {
+      totalExpense = expense.amount + totalExpense;
     });
+    return `${this.name} has ${totalExpense}`;
   },
 };
 
 account.addExpense("coffee", 2);
-console.log(account);
+account.addExpense("drugs", 50);
+console.log(account.expenses);
 console.log(account.getAccountSummary());
