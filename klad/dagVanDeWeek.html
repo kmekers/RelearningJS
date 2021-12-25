@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Koen" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>Titel</title>
+  </head>
+  <body>
+    <script>
+      let days = [
+        "zondag",
+        "maandag",
+        "dinsdag",
+        "woensdag",
+        "donderdag",
+        "vrijdag",
+        "zaterdag",
+      ];
+      let d = new Date();
+      let indexDag = d.getDay();
+      let dayName = days[d.getDay()];
+
+      if (indexDag <= 1 && indexDag >= 6) {
+        document.write(` Het is vandaag ${dayName} en een werkdag`);
+      } else {
+        document.write(` Het is vandaag ${dayName} en weekend`);
+      }
+    </script>
+  </body>
+</html>
