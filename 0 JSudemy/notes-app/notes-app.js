@@ -12,21 +12,11 @@ const notes = [
     body: "Get a new seat",
   },
 ];
-// DOM - Document Object Model
 
-// Query and remove
-// const p = document.querySelector('p')
-// p.remove()
-
-// Query all and remove
-const ps = document.querySelectorAll("p");
-
-ps.forEach(function (p) {
-  p.textContent = "******";
-  // console.log(p.textContent)
-  // p.remove()
+document.querySelector("#create-note").addEventListener("click", function (e) {
+  e.target.textContent = "the button was clicked";
 });
 
-const newParagraph = document.createElement("p");
-newParagraph.textContent = "this is a new element from Javascript";
-document.querySelector("body").appendChild(newParagraph);
+document.querySelector("#remove-all").addEventListener("click", function (e) {
+  e.target.textContent = "ass n tities";
+});
