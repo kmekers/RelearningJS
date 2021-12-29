@@ -21,23 +21,26 @@ const todos = [
   },
 ];
 
-document.querySelector("button").addEventListener("click", function (e) {
-  e.target.textContent = "blow me";
+document.querySelector("#filter-todo").addEventListener("input", function (e) {
+  console.log(e.target.value);
 });
 
-/* const incompleteTodos = todos.filter(function (todo) {
-    return !todo.completed
-})
+const incompleteTodos = todos.filter(function (todo) {
+  return !todo.completed;
+});
 
-const summary = document.createElement('h2')
-summary.textContent = `You have ${incompleteTodos.length} todos left`
-document.querySelector('body').appendChild(summary)
+const summary = document.createElement("h2");
+summary.textContent = `You have ${incompleteTodos.length} todos left`;
+document.querySelector("body").appendChild(summary);
 
 todos.forEach(function (todo) {
-    const p = document.createElement('p')
-    p.textContent = todo.text
-    document.querySelector('body').appendChild(p)
-})
- */
+  const p = document.createElement("p");
+  p.textContent = todo.text;
+  document.querySelector("body").appendChild(p);
+});
+
+document.querySelector("#add-todo").addEventListener("click", function () {
+  console.log("todo added");
+});
 // You have 2 todos left (p element)
 // Add a p for each todo above (use text value)
