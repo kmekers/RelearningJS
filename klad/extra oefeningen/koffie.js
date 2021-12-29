@@ -5,7 +5,6 @@ console.log(hoeOud  * 365 * hoeveel);
 
 let callback = function () {
   let leeftijd = 2021 - geboortejaar;
-
   document.write(
     `<p> u bent ${leeftijd} u verwacht ${hoeOud} te worden. u zal dus nog zoveel ${
       hoeOud - leeftijd * 365 * hoeveel
