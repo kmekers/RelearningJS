@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Koen" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>Titel</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      let getallen = [];
+      let aantal = prompt("hoeveel getallen");
+      let controleAantal = (input) => {
+        if (input == null) {
+          document.write(`<p>annulatie</p>`);
+          return "rip";
+        } else if (input == "") {
+          document.write(`<p>niets ingegeven</p>`);
+          return "rip";
+        } else if (!isNaN(input)) {
+          return input;
+        } else {
+          document.write(`<p>niet correct!</p>`);
+          return "rip";
+        }
+      };
+      let controleGetal = (input) => {
+        if (input == null) {
+          return "rip";
+        } else if (input == "") {
+          return "rip";
+        } else if (isNaN(input)) {
+          return "rip";
+        } else {
+          return input;
+        }
+      };
+      aantal = controleAantal(aantal);
+      if (aantal > 0) {
+        for (let i = 0; i < aantal; i++) {
+          let gok = prompt(`Geef getal ${i + 1} in`);
+          let check = controleGetal(gok);
+          getallen.push(check);
+        }
+      }
+
+      document.write(`<p>${getallen}</p>`);
+    </script>
+  </body>
+</html>

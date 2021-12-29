@@ -1,7 +1,6 @@
 let geboortejaar = prompt("wat is jouw geboortejaar");
 let hoeOud = prompt("Hou oud denk je te worden?");
 let hoeveel = prompt("Hoeveel koppen koffie drink je per dag?");
-console.log(hoeOud  * 365 * hoeveel);
 
 let callback = function () {
   let leeftijd = 2021 - geboortejaar;

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='nl'>
+<head>
+<meta charset='UTF-8' />
+<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+<meta name='author' content='Koen' />
+<meta name='keywords' content='' />
+<meta name='description' content='' />
+<title>Titel</title>
+ </head>
+<body>
+    <script>
+      let fout = false;
+      let voornaam;
+      let achternaam;
+
+      function controle(input) {
+        if (input == null) {
+          fout = true;
+          return "je hebt geannuleerd ";
+        } else if (input.length == 0) {
+          fout = true;
+          return "je hebt niets ingegeven!";
+        } else if (input.length < 2) {
+          fout = true;
+          return "geef 2 letters in of meer!";
+        } else {
+          fout = false;
+          return input.substring(0, 1).toUpperCase() + input.substr(1);
+        }
+      }
+
+      voornaam = prompt("Wat is je voornaam?");
+      voornaam = controle(voornaam);
+      if (fout == false) {
+        achternaam = prompt("Wat is uw achternaam?");
+        achternaam = controle(achternaam);
+        document.write(`<p>Hey ${voornaam} ${achternaam}</p>`);
+      } else {
+        document.write(controle(voornaam));
+      }
+    </script>
+  </body>
+</html>
+
+  
