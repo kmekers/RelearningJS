@@ -1,13 +1,30 @@
-let allesCorrectIngevuld = true;
+let geboortejaar = prompt("wat is jouw geboortejaar");
+let hoeOud = prompt("Hou oud denk je te worden?");
+let hoeveel = prompt("Hoeveel koppen koffie drink je per dag?");
+console.log(hoeOud  * 365 * hoeveel);
+
+let callback = function () {
+  let leeftijd = 2021 - geboortejaar;
+
+  document.write(
+    `<p> u bent ${leeftijd} u verwacht ${hoeOud} te worden. u zal dus nog zoveel ${
+      hoeOud - leeftijd * 365 * hoeveel
+    }koppen koffie drinken</p>`
+  );
+};
 
 let ingeven = function () {
-  let geboortejaar = prompt("wat is jouw geboortejaar");
-  let hoeOud = prompt("Hou oud denk je te worden?");
-  let hoeveel = prompt("Hoeveel koppen koffie drink je per dag?");
+  if (geboortejaar == null || hoeOud == null || hoeveel == null) {
+    return alert("je geannuleerd");
+  } else if (geboortejaar == "" || hoeOud == "" || hoeveel == "") {
+    return alert("je hebt ergenis iets niet ingegeven");
+  } else {
+    callback();
+  }
 };
 
 ingeven();
-/* 
+/* ingeven();
 Maak een nieuwe html document: koffie-voor-het-leven.html
 Definieer een functie “ingeven”.
 
