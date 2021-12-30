@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Koen" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>Titel</title>
+  </head>
+  <body>
+    <script>
+      let tekst =
+        "Godslastering en andere vuile woorden zullen gecensureerd worden!";
+      document.write(`<p>${tekst}</p>`);
+      let input = prompt("welke tekst wil u censureren");
+
+      if (tekst.includes(input)) {
+        document.write(tekst.replace(input, "xxxxx"));
+      }
+      else{ document.write(`<p>dit woord zit er niet in</p>`)}
+
+    </script>
+  </body>
+</html>
