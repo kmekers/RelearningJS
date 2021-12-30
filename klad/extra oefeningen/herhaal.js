@@ -3,5 +3,4 @@ document.querySelector("#knop").addEventListener("click", function () {
     document.write(`<p>test</p>`);
   }
 });
-/* 
-; */
+

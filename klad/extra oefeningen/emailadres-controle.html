@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Koen" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>Titel</title>
+  </head>
+  <body>
+    <script>
+      let email = prompt("wat is jouw emailadres?");
+
+      if (email.includes("@") == false) {
+        document.write(`<p> je hebt geen '@'gebruikt</p>`);
+      } else if (email.includes(" ") === true) {
+        document.write(`<p>je mag geen spaties gebruiken</p>`);
+      } else if (email.includes(".") == false) {
+        document.write(`<p>je hebt geen punt gebruikt </p>`);
+      } else if (email.indexOf("@") <= 2) {
+        document.write(`<p>je moet 2 chars hebben voor de "@" </p>`);
+      } else document.write(`<p>another one bites the dust</p>`);
+    </script>
+  </body>
+</html>

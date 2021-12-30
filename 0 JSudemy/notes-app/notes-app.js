@@ -13,6 +13,8 @@ const notes = [
   },
 ];
 
+const filters = { searchtext: "" };
+
 document.querySelector("#create-note").addEventListener("click", function (e) {
   e.target.textContent = "the button was clicked";
 });
