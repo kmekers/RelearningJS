@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Koen" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>Titel</title>
+  </head>
+
+  <body>
+    <script>
+      const namen = [];
+
+      const tonen = () => {
+        if (namen.length > 0) {
+          document.write(`<p>Dit zijn de cursisten:</p>`);
+          for (i = 0; i < namen.length; i++) {
+            return document.write(`${namen}`);
+          }
+        } else {
+          return document.write(`<p>Er zijn geen cursisten ingegeven</p>`);
+        }
+      };
+
+      const ingeven = () => {
+        let input = prompt("Geef de naam van de cursist in. 0 om te stoppen");
+        if (input === null) {
+          return document.write(`<p>Je hebt geannulleerd</p>`);
+        } else if (input.length === 0) {
+          return document.write(`<p>Je hebt niets ingegeven</p>`);
+        } else if (input === "0") {
+          document.write(`<p>U bent gestopt met cursisten ingeven</p>`);
+          return tonen();
+        } else {
+          namen.push(input);
+          return ingeven();
+        }
+      };
+      ingeven();
+      console.log(namen);
+    </script>
+  </body>
+</html>
