@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang='nl'>
-<head>
-<meta charset='UTF-8' />
-<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-<meta name='author' content='Koen' />
-<meta name='keywords' content='' />
-<meta name='description' content='' />
-<title>Titel</title>
- </head>
-<body>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Koen" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>Titel</title>
+  </head>
+  <body>
     <script>
-        
+      function fiveAndGreaterOnly(arr) {
+        arr.filter(  > 5);
+        return arr > 5;
+      }
+      // test
+      console.log(fiveAndGreaterOnly([3, 6, 8, 2])); /// [6, 8]
     </script>
-</body>
+  </body>
 </html>
