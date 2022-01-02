@@ -23,14 +23,10 @@ const todos = [
 const filters = { searchText: "" };
 
 const renderdTodos = function (todos, filters) {
-  const filteredTodos = todos.filter(function (note) {
-    return todos.text.toLowercase().includes(filters.searchText);
+  const filteredTodos = todos.filter(function (todo) {
+    return todo.text.toLowerCase().includes(filters.searchText);
   });
 };
-
-document.querySelector("#filter-todo").addEventListener("input", function (e) {
-  console.log(e.target.value);
-});
 
 const incompleteTodos = todos.filter(function (todo) {
   return !todo.completed;
@@ -50,7 +46,9 @@ document.querySelector("#add-todo").addEventListener("click", function () {
   console.log("todo added");
 });
 document.querySelector("#search-text").addEventListener("input", function (e) {
-  console.log(e.target.value);
+  filters.searchText = e.target.value;
+  renderdTodos(todos, filters);
 });
+
 // You have 2 todos left (p element)
 // Add a p for each todo above (use text value)
