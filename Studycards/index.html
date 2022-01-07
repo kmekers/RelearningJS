@@ -6,13 +6,68 @@
     <meta name="author" content="Koen" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
+    <link rel="stylesheet" href="studycard.css" />
+    <script src="studycard.js"></script>
     <title>Titel</title>
   </head>
   <body>
     <section class="notecontainer">
-      <div id="note" class="note">
-          <input type="text">
-      </div>
+      <h1>Neem hier je notitie</h1>
+      <form id="myDIV" class="note center">
+        <input id="titleinput" type="text" placeholder="test" />
+        <input id="textinput" type="text" placeholder="test2" />
+      </form>
+
+      <svg
+        onclick="myFunction()"
+        id="Plusknop"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="50.618"
+        height="143.618"
+        viewBox="0 0 143.618 143.618"
+        onclick="myFunction()"
+      >
+        <defs>
+          <linearGradient
+            id="linear-gradient"
+            x1="0.5"
+            x2="0.5"
+            y2="1"
+            gradientUnits="objectBoundingBox"
+          >
+            <stop offset="0" stop-color="#ffb506" />
+            <stop offset="1" stop-color="#ecb530" stop-opacity="0.569" />
+          </linearGradient>
+        </defs>
+        <circle
+          id="Ellipse_1"
+          data-name="Ellipse 1"
+          cx="70.588"
+          cy="70.588"
+          r="70.588"
+          transform="matrix(0.017, 1, -1, 0.017, 141.154, 0)"
+          fill="url(#linear-gradient)"
+        />
+        <path
+          id="Path_1"
+          data-name="Path 1"
+          d="M0,0H93.632"
+          transform="matrix(-0.017, 1, -1, -0.017, 73.443, 25)"
+          stroke="#fff"
+          stroke-width="10"
+          fill="url(#linear-gradient)"
+        />
+        <line
+          id="Line_3"
+          data-name="Line 3"
+          x2="100"
+          transform="translate(123.626 71.809) rotate(180)"
+          fill="none"
+          stroke="#fff"
+          stroke-width="10"
+        />
+      </svg>
     </section>
   </body>
 </html>
