@@ -6,9 +6,9 @@
 // button nieuw
 function myFunction() {
   var x = document.getElementById("myDIV");
-  if (x.style.display === "none") {
-    x.style.display = "block";
+  if (x.style.visibility === "visible") {
+    x.style.visibility = "hidden";
   } else {
-    x.style.display = "none";
+    x.style.visibility = "visible";
   }
 }

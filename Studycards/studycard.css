@@ -37,7 +37,7 @@ button {
   position: relative;
 }
 #myDIV {
-  display: none;
+  visibility: hidden;
 }
 
 
